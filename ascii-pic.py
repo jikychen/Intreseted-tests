@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """
 Created on Mon Nov 19 08:21:02 2018
-
+@使用ascii码重构rgb位图
 @author: jikychen
 """
 
