@@ -12,7 +12,7 @@ parser = argparse.ArgumentParser()
 
 parser.add_argument('file')
 parser.add_argument('-o', '--output')
-parser.add_argument('--width', type = int, default = 160)
+parser.add_argument('--width', type = int, default = 160)#原代码是80，会导致输出比例不对
 parser.add_argument('--height', type = int, default = 80)
 
 args = parser.parse_args()
@@ -35,7 +35,7 @@ def get_char(r, g, b, alpha = 256):
 if __name__ == '__main__':
     
     im = Image.open(IMG)
-    im = im.convert('RGB')
+    im = im.convert('RGB')#在Windows的spyder环境中要加上这一行
     im = im.resize((WIDTH,HEIGHT), Image.NEAREST)
     
     txt = ''
